@@ -6,3 +6,5 @@ const customerSchema = new mongoose.Schema({
     phone_number: {type: Number},
     subscribed_vendors: [{type: mongoose.Schema.Types.ObjectId, ref:'Customer'}]
 })
+
+module.exports = mongoose.model('Customer', customerSchema)
